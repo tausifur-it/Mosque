@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0a0a0a;  /* Black background */
+    color: #f5d27a;       /* Gold text */
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #000000;
+    color: #f5d27a;
+    border-bottom: 1px solid #f5d27a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #f5d27a;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f5d27a;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    background: url('images/hero.jpg') center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #f5d27a;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: #f5d27a;
+    text-shadow: 0 0 15px rgba(245, 210, 122, 0.7);
+}
+
+.hero-text p {
+    color: #ffe9b0;
+    margin: 10px 0 20px;
+    font-size: 16px;
+}
+
+.btn {
+    background: #f5d27a;
+    padding: 10px 22px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #ffe7a0;
+    box-shadow: 0 0 10px #f5d27a;
+}
+
+/* GENERIC SECTIONS */
+section {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+section h2 {
+    color: #f5d27a;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(245, 210, 122, 0.5);
+}
+
+.section-note {
+    font-size: 13px;
+    color: #f8e4a1;
+    margin-bottom: 25px;
+}
+
+/* ABOUT */
+.about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* LIVE ADHAN */
+.live-adhan-subtitle {
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #f8e4a1;
+}
+
+#live-adhan-box {
+    max-width: 600px;
+    margin: auto;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background: #111;
+    border: 1px solid #f5d27a;
+    text-align: left;
+}
+
+#live-adhan-box p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* PRAYER TIMINGS */
+table {
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #111;
+}
+
+table, th, td {
+    border: 1px solid #f5d27a;
+    padding: 10px;
+}
+
+th {
+    background: #f5d27a;
+    color: #000;
+    font-weight: bold;
+}
+
+/* COURSES */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.course-card {
+    background: #111;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: left;
+    border: 1px solid rgba(245, 210, 122, 0.5);
+    box-shadow: 0 0 8px rgba(245, 210, 122, 0.15);
+}
+
+/* EVENTS + CALENDAR */
+.events-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.events-list, .calendar-box {
+    background: #111;
+    border-radius: 8px;
+    padding: 18px;
+    border: 1px solid rgba(245, 210, 122, 0.5);
+    flex: 1 1 280px;
+}
+
+.events-list ul {
+    list-style: none;
+    text-align: left;
+}
+
+.events-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(245, 210, 122, 0.3);
+    font-size: 14px;
+}
+
+/* CALENDAR */
+#calendar {
+    margin-top: 10px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day-name, .calendar-day {
+    padding: 6px 0;
+    font-size: 12px;
+}
+
+.calendar-day-name {
+    font-weight: bold;
+}
+
+.calendar-day {
+    border: 1px solid rgba(245, 210, 122, 0.2);
+    border-radius: 4px;
+}
+
+.calendar-day.has-event {
+    background: rgba(245, 210, 122, 0.2);
+    border-color: #f5d27a;
+}
+
+/* MEDIA */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.media-item {
+    background: #111;
+    border-radius: 8px;
+    padding: 18px;
+    border: 1px solid rgba(245, 210, 122, 0.5);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-top: 10px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* DONATION */
+.donation-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.donation-box {
+    background: #111;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: left;
+    border: 1px solid rgba(245, 210, 122, 0.5);
+}
+
+.donation-form-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation-form-box input, 
+.donation-form-box textarea {
+    padding: 10px;
+    margin: 7px 0;
+    border: 1px solid #f5d27a;
+    border-radius: 4px;
+    background: #000;
+    color: #f5d27a;
+}
+
+.donation-form-box button {
+    padding: 10px;
+    background: #f5d27a;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* CONTACT */
+form {
+    width: 60%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, textarea {
+    padding: 10px;
+    margin: 7px 0;
+    border: 1px solid #f5d27a;
+    border-radius: 4px;
+    background: #111;
+    color: #f5d27a;
+}
+
+form button {
+    padding: 10px;
+    background: #f5d27a;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.map iframe {
+    border: 2px solid #f5d27a;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* MESSAGES */
+.success-message {
+    color: #9ff59a;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.error-message {
+    color: #ff8686;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: #f5d27a;
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid #f5d27a;
+}
+
+/* ADMIN PAGE */
+.admin-body {
+    background: #050505;
+}
+
+.admin-section {
+    padding: 40px 20px;
+}
+
+.admin-login-box, .admin-dashboard .admin-card {
+    max-width: 700px;
+    margin: 15px auto;
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(245, 210, 122, 0.5);
+}
+
+.admin-login-box h2,
+.admin-dashboard h2 {
+    text-align: center;
+}
+
+.admin-dashboard {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.prayer-form .prayer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0;
+}
+
+.prayer-form .prayer-row label {
+    flex: 1;
+    text-align: left;
+}
+
+.prayer-form .prayer-row input {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.event-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.admin-events-list {
+    list-style: none;
+    text-align: left;
+    font-size: 14px;
+}
+
+.admin-events-list li {
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(245, 210, 122, 0.3);
+}
+
+.admin-events-list button {
+    margin-left: 10px;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+/* UTILS */
+.hidden {
+    display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    table, form {
+        width: 100%;
+    }
+
+    .prayer-form .prayer-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .prayer-form .prayer-row input {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 5px;
+    }
+}
